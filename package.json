@@ -2,7 +2,7 @@
   "name": "imageserver",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/app.js",
   "dependencies": {
     "express": "^4.17.1"
   },

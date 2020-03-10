@@ -2,7 +2,7 @@ import express, { Application} from 'express';
 
 var app : Application = express();
 app.get('/', (req, res) => {
-
+  res.send('Hello');
 })
 const POST: string = process.env.PORT || '5000';
 app.listen(POST, () => console.log(`Server running on port ${POST}`))
