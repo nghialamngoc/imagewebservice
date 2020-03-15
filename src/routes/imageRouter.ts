@@ -4,6 +4,10 @@ let router = express.Router();
 let formidable = require('formidable');
 let fs = require('fs');
 
+router.get('/test', (req: Request, res: Response) => {
+  res.send('hello');
+})
+
 // OPEN IMAGE
 router.get('/open_image', (req: Request, res: Response) => {
   const URL: string = 'uploads/' + req.query.image_name;
