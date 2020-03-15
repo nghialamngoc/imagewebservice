@@ -1,8 +1,29 @@
 import express, { Request, Response, NextFunction }  from 'express';
 
-const router = express.Router();
-const formidable = require('formidable');
+let router = express.Router();
+let formidable = require('formidable');
+let fs = require('fs');
 
+// OPEN IMAGE
+router.get('/open_image', (req: Request, res: Response) => {
+  const URL: string = 'uploads/' + req.query.image_name;
+  fs.readFile( URL, ( err: any, imageData: any ) : void => {
+    if( err != null && err != undefined ){
+      res.status(404).json({
+        resultInfo: 'Nack',
+        result: {
+          message: `Cannot open image. Error is ${err}` 
+        }
+      });
+      return;
+    } else {
+      res.writeHead( 200, { 'Content-Type': 'image/jpeg' });
+      res.end(imageData);
+    }
+  })
+})
+
+// UPLOAD IMAGE
 router.post('/upload_images', (req: Request ,res: Response, next: NextFunction ) => {
   const options = {
     uploadDir: 'uploads',
@@ -11,7 +32,7 @@ router.post('/upload_images', (req: Request ,res: Response, next: NextFunction )
     multiples: true
   }
   let form = formidable(options);
-  form.parse(req, (err: any, fields: any, files: any) => {
+  form.parse( req, ( err: any, fields: any, files: any ): void => {
     if( err != null ){
       res.status(404).json({
         resultInfo: 'Nack',
