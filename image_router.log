@@ -1,0 +1,112 @@
+[2020-03-16T21:25:05.024] [DEBUG] image_router - [Start] upload_image single file upload
+[2020-03-16T21:25:05.024] [DEBUG] image_router - /upload_image file data:  undefined
+[2020-03-16T21:25:05.051] [DEBUG] image_router - /upload_image Upload images successfully
+[2020-03-16T21:25:33.852] [DEBUG] image_router - [Start] upload_image single file upload
+[2020-03-16T21:25:33.874] [DEBUG] image_router - /upload_image file data:  {
+  fieldname: 'image',
+  originalname: '1 (18).png',
+  encoding: '7bit',
+  mimetype: 'image/png',
+  destination: './uploads',
+  filename: '2020-03-16_1 (18).png',
+  path: 'uploads\\2020-03-16_1 (18).png',
+  size: 2286106
+}
+[2020-03-16T21:25:33.875] [DEBUG] image_router - /upload_image Upload images successfully
+[2020-03-16T21:27:36.434] [DEBUG] image_router - [Start] upload_images multiple files upload
+[2020-03-16T21:27:36.448] [DEBUG] image_router - /upload_images array file data:  [
+  {
+    fieldname: 'images',
+    originalname: '1.jpg',
+    encoding: '7bit',
+    mimetype: 'image/jpeg',
+    destination: './uploads',
+    filename: '2020-03-16_1.jpg',
+    path: 'uploads\\2020-03-16_1.jpg',
+    size: 68231
+  },
+  {
+    fieldname: 'images',
+    originalname: '80412261_154826739192408_8625003416583667712_o.jpg',
+    encoding: '7bit',
+    mimetype: 'image/jpeg',
+    destination: './uploads',
+    filename: '2020-03-16_80412261_154826739192408_8625003416583667712_o.jpg',
+    path: 'uploads\\2020-03-16_80412261_154826739192408_8625003416583667712_o.jpg',
+    size: 136928
+  }
+]
+[2020-03-16T21:27:36.449] [ERROR] image_router - /upload_image error: req.file == null || req.file == undefined
+[2020-03-16T21:28:29.811] [DEBUG] image_router - [Start] upload_images multiple files upload
+[2020-03-16T21:30:38.185] [DEBUG] image_router - [Start] upload_images multiple files upload
+[2020-03-16T21:30:38.196] [DEBUG] image_router - /upload_images array file data:  [
+  {
+    fieldname: 'images',
+    originalname: '1.jpg',
+    encoding: '7bit',
+    mimetype: 'image/jpeg',
+    destination: './uploads',
+    filename: '2020-03-16_1.jpg',
+    path: 'uploads\\2020-03-16_1.jpg',
+    size: 68231
+  },
+  {
+    fieldname: 'images',
+    originalname: '80412261_154826739192408_8625003416583667712_o.jpg',
+    encoding: '7bit',
+    mimetype: 'image/jpeg',
+    destination: './uploads',
+    filename: '2020-03-16_80412261_154826739192408_8625003416583667712_o.jpg',
+    path: 'uploads\\2020-03-16_80412261_154826739192408_8625003416583667712_o.jpg',
+    size: 136928
+  }
+]
+[2020-03-16T21:30:38.197] [DEBUG] image_router - /upload_images Upload images successfully
+[2020-03-16T21:32:29.039] [DEBUG] image_router - [Start] upload_images multiple files upload
+[2020-03-16T21:32:29.051] [DEBUG] image_router - /upload_images array file data:  [
+  {
+    fieldname: 'images',
+    originalname: '1.jpg',
+    encoding: '7bit',
+    mimetype: 'image/jpeg',
+    destination: './uploads',
+    filename: '2020-03-16_1.jpg',
+    path: 'uploads\\2020-03-16_1.jpg',
+    size: 68231
+  },
+  {
+    fieldname: 'images',
+    originalname: '80412261_154826739192408_8625003416583667712_o.jpg',
+    encoding: '7bit',
+    mimetype: 'image/jpeg',
+    destination: './uploads',
+    filename: '2020-03-16_80412261_154826739192408_8625003416583667712_o.jpg',
+    path: 'uploads\\2020-03-16_80412261_154826739192408_8625003416583667712_o.jpg',
+    size: 136928
+  }
+]
+[2020-03-16T21:32:29.052] [DEBUG] image_router - /upload_images Upload images successfully
+[2020-03-16T21:33:03.195] [DEBUG] image_router - [Start] upload_images multiple files upload
+[2020-03-16T21:33:03.197] [DEBUG] image_router - /upload_images array file data:  []
+[2020-03-16T21:33:03.197] [ERROR] image_router - /upload_image error: req.files.length == 0
+[2020-03-16T21:33:08.923] [DEBUG] image_router - [Start] upload_images multiple files upload
+[2020-03-16T21:33:08.967] [DEBUG] image_router - /upload_images array file data:  []
+[2020-03-16T21:33:08.967] [ERROR] image_router - /upload_image error:  Error: File upload only supports the following filetypes -  application/x-msdos-program
+[2020-03-16T21:34:02.420] [DEBUG] image_router - [Start] upload_image single file upload
+[2020-03-16T21:34:02.458] [DEBUG] image_router - /upload_image file data:  undefined
+[2020-03-16T21:34:02.458] [ERROR] image_router - /upload_image error:  Error: File upload only supports the following filetypes -  application/x-msdos-program
+[2020-03-16T21:34:07.184] [DEBUG] image_router - [Start] upload_image single file upload
+[2020-03-16T21:34:07.195] [DEBUG] image_router - /upload_image file data:  {
+  fieldname: 'image',
+  originalname: '89292970_568707187068257_8904214812385345536_n.jpg',
+  encoding: '7bit',
+  mimetype: 'image/jpeg',
+  destination: './uploads',
+  filename: '2020-03-16_89292970_568707187068257_8904214812385345536_n.jpg',
+  path: 'uploads\\2020-03-16_89292970_568707187068257_8904214812385345536_n.jpg',
+  size: 439473
+}
+[2020-03-16T21:34:07.196] [DEBUG] image_router - /upload_image Upload image successfully
+[2020-03-16T21:34:40.236] [DEBUG] image_router - [Start] upload_image single file upload
+[2020-03-16T21:34:40.238] [DEBUG] image_router - /upload_image file data:  undefined
+[2020-03-16T21:34:40.238] [ERROR] image_router - /upload_image error: req.file == null || req.file == undefined
