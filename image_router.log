@@ -110,3 +110,15 @@
 [2020-03-16T21:34:40.236] [DEBUG] image_router - [Start] upload_image single file upload
 [2020-03-16T21:34:40.238] [DEBUG] image_router - /upload_image file data:  undefined
 [2020-03-16T21:34:40.238] [ERROR] image_router - /upload_image error: req.file == null || req.file == undefined
+[2020-03-16T21:58:25.521] [DEBUG] image_router - [Start] upload_image single file upload
+[2020-03-16T21:58:25.532] [DEBUG] image_router - /upload_image file data:  {
+  fieldname: 'image',
+  originalname: '86351830_423061251804239_5529337048579702784_n.jpg',
+  encoding: '7bit',
+  mimetype: 'image/jpeg',
+  destination: './uploads',
+  filename: '2020-03-16_86351830_423061251804239_5529337048579702784_n.jpg',
+  path: 'uploads\\2020-03-16_86351830_423061251804239_5529337048579702784_n.jpg',
+  size: 63711
+}
+[2020-03-16T21:58:25.533] [DEBUG] image_router - /upload_image Upload image successfully

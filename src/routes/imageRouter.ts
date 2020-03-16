@@ -10,15 +10,17 @@ const storage = multer.diskStorage({
     cb( null, './uploads' );
   },
   filename: function( req: any, file: any, cb: ( err: any, dest: string ) => void ){
+    logger.debug('[Start]/upload_image filename: ', new Date().toISOString().slice(0, 10) + '_' + file.originalname);
     cb( null, new Date().toISOString().slice(0, 10) + '_' + file.originalname );
   }
 });
 const fileFilter = function (req: any, file: any, cb: ( err: any, next?: boolean ) => void) {
-  // const filetypes = /jpeg|jpg|png/;
-  // const isSupport: boolean = filetypes.test(file.originalname.slice(file.originalname.length - 4));
+  logger.debug('[Start]/upload_image fileFilter');
+  logger.debug('/upload_image file.mimetype: ', file.mimetype );
   if ( file.mimetype === 'image/jpeg' || file.mimetype === 'image/png' ) {
     cb(null, true);
   } else {
+    logger.error('/upload_image fileFilter error: ');
     cb(new Error(`File upload only supports the following filetypes -  ${file.mimetype}`));
   }
 }
