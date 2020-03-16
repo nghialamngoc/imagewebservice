@@ -3,11 +3,11 @@ import express, { Request, Response, NextFunction }  from 'express';
 let router = express.Router();
 let fs = require('fs');
 let multer  = require('multer');
-
+let path = require('path');
 // multer storage config
 const storage = multer.diskStorage({
   destination: function( req: any, file: any, cb: ( err: any, dest: string ) => void ){
-    cb( null, './uploads' );
+    cb( null, 'src/public/uploads' );
   },
   filename: function( req: any, file: any, cb: ( err: any, dest: string ) => void ){
     logger.debug('[Start]/upload_image filename: ', new Date().toISOString().slice(0, 10) + '_' + file.originalname);
@@ -20,7 +20,7 @@ const fileFilter = function (req: any, file: any, cb: ( err: any, next?: boolean
   if ( file.mimetype === 'image/jpeg' || file.mimetype === 'image/png' ) {
     cb(null, true);
   } else {
-    logger.error('/upload_image fileFilter error: ');
+    logger.error('/upload_image error filetypes suport');
     cb(new Error(`File upload only supports the following filetypes -  ${file.mimetype}`));
   }
 }
@@ -58,7 +58,7 @@ router.get('/image_upload/log', (req: Request, res: Response) => {
 })
 // OPEN IMAGE
 router.get('/open_image', (req: Request, res: Response) => {
-  const URL: string = 'uploads/' + req.query.image_name;
+  const URL: string = 'src/public/uploads/' + req.query.image_name;
   fs.readFile( URL, ( err: any, imageData: any ) : void => {
     if( err != null && err != undefined ){
       res.status(404).json({
